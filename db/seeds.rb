@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Doing it's thing..."
+100.times do
+	article = Article.new(
+		title: Faker::TwinPeaks.character,
+		content: Faker::TwinPeaks.quote
+		 )
+	article.save!
+end
+puts "ok..."
